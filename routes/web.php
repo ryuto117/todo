@@ -29,4 +29,6 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 
+//できないこと、ログイン
+
 ?>
