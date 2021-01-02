@@ -13,14 +13,11 @@
               </div>
             @endif
             @if($errors->any())
-                <div class="alert alert-danger">
+              <div class="alert alert-danger">
                 @foreach($errors->all() as $message)
-
-                {{ $message }}
-
-
+                  <p>{{ $message }}</p>
                 @endforeach
-                </div>
+              </div>
             @endif
             <form action="{{ route('password.email') }}" method="POST">
               @csrf
