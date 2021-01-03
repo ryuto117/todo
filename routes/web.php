@@ -34,13 +34,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 Auth::routes();
 
-//私の目的：Sendgridを利用するためにFromの変更
-//そのためにはWeb APIで送信かstmpで送信するかの2択
-//Web APIで送信する場合は、https://www.internetacademy.jp/it/programming/javascript/how-to-use-web-api.html#chapter3
-//STMPの場合は、固定文字列「apikey」をBASE64エンコードした文字列が必要
+//sendgridをアドオンするためにアプリの削除をしてgitにアップロードしようとした過程でつまづいた
+//解決策は、すでにアップロードしている所に更新する形でアップロードする必要があるのかな？？
 
 ?>
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
